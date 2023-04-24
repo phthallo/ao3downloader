@@ -3,7 +3,7 @@ import os.path
 import argparse
 import re
 parser = argparse.ArgumentParser()
-parser = argparse.ArgumentParser(description="Accepts an Archive of Our Own link, or a .txt file containing Ao3 links, and downloads the work or series as a requested file type. \n By default, works will download in the same location as this file. \n Series will download in a separate folder. \nAs series and works can share the same ID, this only supports links. \nPLease note that attempts to download large quantities of fanworks may result in being rate-limited by Ao3.")
+parser = argparse.ArgumentParser(description="Accepts an Archive of Our Own link, or a .txt file containing Ao3 links, and downloads the work or series as a requested file type. By default, works will download in the same location as this file. Series will download in a separate folder. As series and works can share the same ID, this only supports links. Please note that attempts to download large quantities of fanworks may result in being rate-limited by Ao3.")
 
 
 #### Questions if it's a work or series.
