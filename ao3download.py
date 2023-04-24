@@ -13,7 +13,7 @@ group.add_argument('--file', action='store_true', help="Specify to download from
 
 #### File type and location. Not optional.
 parser.add_argument('path', type=str, help="If downloading a work or series, enter its Ao3 URL. \nIf downloading from a text file, enter the name of the text file (e.g fics.txt)")
-parser.add_argument('filetype', type=str, const="PDF", help="Enter a file type out of one of the following: \nAZW3, EPUB, MOBI, PDF, HTML.")
+parser.add_argument('filetype', type=str, help="Enter a file type out of one of the following: \nAZW3, EPUB, MOBI, PDF, HTML.")
 
 args = parser.parse_args()
 path = args.path
