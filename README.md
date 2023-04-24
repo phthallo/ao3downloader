@@ -61,6 +61,8 @@ If there are series located in this text file as well, they will be saved at `Ar
 ## To-Do List
 [ ] Allow user to customise locations of saved files.
 
+[ ] Allow user to enter own path for text file. 
+
 [ ] Add author names to be added to file names.
 
 [ ] Allow user to search the archive and download from there.
