@@ -39,7 +39,7 @@ options:
 This will save the fanfiction as `Stag Beetles and Broken Legs.pdf` at the following path: `Archive of Our Own\Works\` relative to the location of the `ao3download.py` file. 
 
 ### Downlading a series
-`python ao3download.py series https://archiveofourown.org/series/1264421 pdf`
+`python ao3download.py --series https://archiveofourown.org/series/1264421 pdf`
 
 This will save the series as separate `.pdf` files for each work at the following path: `Archive of Our Own\entomology\` relative to the location of the `ao3download.py` file.
 
@@ -53,7 +53,7 @@ https://archiveofourown.org/works/17623268
 ```
 where the text file is located in the same folder as the `ao3download.py` file, and all works are separated by newlines.
 
-`python ao3download.py series textfile.txt pdf`
+`python ao3download.py --series textfile.txt pdf`
 
 This will save all works in the text file as `.pdf` files at the following path: `Archive of Our Own\Works\` relative to the location of the `ao3download.py` file.
 If there are series located in this text file as well, they will be saved at `Archive of Our Own\<series name>\` instead.
