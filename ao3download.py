@@ -67,8 +67,6 @@ if args.work:
 if args.file:
     ficfile = open(str(args.path), 'r')
     lines = ficfile.readlines()
-    threads = []
-    works = []
     for i in lines:
         workDescriptor = idSearch(i)[0]
         workID = idSearch(i)[1]
