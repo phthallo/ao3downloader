@@ -2,16 +2,16 @@
 Extremely basic CLI for downloading fanworks from archiveofourown.org in a variety of supported formats.
 
 ## Prerequisites
-[Python 3 or higher](https://www.python.org/downloads/)
+- [Python 3 or higher](https://www.python.org/downloads/)
 
 
-[ArmindoFlores' ao3_api](https://github.com/ArmindoFlores/ao3_api) (`pip install ao3_api`)
+- [ArmindoFlores' ao3_api](https://github.com/ArmindoFlores/ao3_api) (`pip install ao3_api`)
 
 
 ## Instructions for Use
-Download [ao3download.py](https://github.com/phthallo/ao3downloader/blob/main/ao3download.py).
+- Download [ao3download.py](https://github.com/phthallo/ao3downloader/blob/main/ao3download.py).
 
-Run `cmd` in the location of the downloaded file.
+- Run `cmd` in the location of the downloaded file.
 
 ```
 usage: ao3download.py [-h] [--work | --file] path filetype
@@ -59,11 +59,11 @@ This will save all works in the text file as `.pdf` files at the following path:
 If there are series located in this text file as well, they will be saved at `Archive of Our Own\<series name>\` instead.
 
 ## To-Do List
-[ ] Allow user to customise locations of saved files.
+- [ ] Allow user to customise locations of saved files.
 
-[ ] Allow user to enter own path for text file. 
+- [ ] Allow user to enter own path for text file. 
 
-[ ] Add author names to be added to file names.
+- [ ] Add author names to be added to file names.
 
-[ ] Allow user to search the archive and download from there.
+- [ ] Allow user to search the archive and download from there.
 
