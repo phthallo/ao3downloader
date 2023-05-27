@@ -9,7 +9,8 @@ Extremely basic CLI for downloading fanworks from archiveofourown.org in a varie
 
 
 ## Instructions for Use
-- Download [ao3download.py](https://github.com/phthallo/ao3downloader/blob/main/ao3download.py).
+- Clone the repository. 
+`git clone ao3downloader/ao3download.py at main · phthallo/ao3downloader`
 
 - Run `cmd` in the location of the downloaded file.
 
