@@ -10,7 +10,7 @@ Extremely basic CLI for downloading fanworks from archiveofourown.org in a varie
 
 ## Instructions for Use
 - Clone the repository. 
-- 
+
 `git clone https://github.com/phthallo/ao3downloader/`
 
 - Run `cmd` in the location of the downloaded file.
@@ -66,6 +66,7 @@ If there are series located in this text file as well, they will be saved at `Ar
 You can update the default settings for save location and filetype by using the following commands in conjunction with standard usage. This information will be stored in the settings.json file.
 
 `-save [SAVE]` [default is C:/Users/USERNAME/Documents/Archive of Our Own]
+
 `-filetype [{azw3,epub,mobi,pdf,html}]` [default is PDF]
 
 ## To-Do List
