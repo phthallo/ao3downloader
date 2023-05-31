@@ -70,6 +70,7 @@ If there are series located in this text file as well, they will be saved at `Ar
 You can update the default settings for save location and filetype by using the following commands in conjunction with standard usage. This information will be stored in the settings.json file.
 
 `-save [SAVE]` [default is C:/Users/USERNAME/Documents/Archive of Our Own]
+
 `-filetype [{azw3,epub,mobi,pdf,html}]` [default is PDF]
 
 ## Saving from your bookmarks
