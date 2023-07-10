@@ -34,22 +34,22 @@ options:
   -format [{azw3,epub,mobi,pdf,html}]
                         Specify a file type out of one of the following: azw3, epub, mobi, pdf, html. This will    
                         be remembered.
-  -login [LOGIN]        Specify your Ao3 login to download fanworks from your bookmarks, in the following format:  
-                        username:password. This will be remembered.
+  -login [LOGIN]        Specify your Ao3 login to download fanworks from your bookmarks or from restricted works,  
+                        in the following format: username:password. This will be remembered.
   -source [{url,file,bookmarks}]
-                        Specify to download from an AO3 work/series URL, from a file, or from your bookmarks.   
+                        Specify to download from an AO3 work/series URL, from a file, or from your bookmarks. 
  ```
   
 ## Example usage
 ### Downloading a singular fanwork
-`python ao3download.py -format mobi -source url https://archiveofourown.org/works/17400464`
+Downloading works and series can both be done with this command. 
 
-This will save the fanfiction as `Stag Beetles and Broken Legs.mobi` at the following path: `C:/Users/USERNAME/Documents/Archive of Our Own/Works`. 
+`python ao3download.py -source url https://archiveofourown.org/works/17400464`
+This will save the fanfiction as `Stag Beetles and Broken Legs.pdf` at the following path: `C:/Users/USERNAME/Documents/Archive of Our Own/Works`. Individual fanfics will always be saved under a 'Works' folder within whatever save location you set.
 
-### Downlading a series
-`python ao3download.py -format pdf -source url https://archiveofourown.org/series/1264421`
+`python ao3download.py -source url https://archiveofourown.org/series/1264421`
 
-This will save the series as separate `.pdf` files for each work at the following path: `C:/Users/%username%/Documents/Archive of Our Own/Stag Beetles and Broken Legs`. 
+This will save the series as separate .pdf files for each work at the following path: `C:/Users/USERNAME/Documents/Archive of Our Own/entomology`. Series will always be saved under a folder of the series' name within whatever save location you set.  
 
 ### Downloading from a text file
 #### textfile.txt
@@ -61,20 +61,24 @@ https://archiveofourown.org/works/17623268
 ```
 where all works are separated by newlines.
 
-`python ao3download.py -source file C:/Users/USERNAME/foo/bar/path/textfile.txt`
+`python ao3download.py -source file C:\Users\USERNAME\foo\bar\textfile.txt`
 
-This will open the specified text file and save all the links inside as `.pdf` files in the `/Works` folder. 
-If there are series located in this text file as well, they will be saved at `Archive of Our Own\<series name>\` instead.
 
 ## Changing default settings
-You can update the default settings for save location and filetype by using the following commands in conjunction with standard usage. This information will be stored in the settings.json file.
+You can update the default settings for save location and filetype by using the following commands in conjunction with standard usage. This information will be stored in the settings.json file. **Your login is stored in plaintext since it's run on your device, so do not share your `settings.json` file with anyone.**
 
 `-save [SAVE]` [default is C:/Users/USERNAME/Documents/Archive of Our Own]
 
-`-filetype [{azw3,epub,mobi,pdf,html}]` [default is PDF]
+`-format [{azw3,epub,mobi,pdf,html}]` [default is PDF]
+
+`-login [LOGIN]` [default needs to be changed to access authorised works or bookmarks. Entered in the format username:password]
 
 ## Saving from your bookmarks
-Will be added fully later. Please note that your login is stored within the `.json` file so that it persists across usages; do not share this file with others. I will add an option to forget this later. 
+In order to save from your bookmarks, you must have set your login using the `-login username:password` command. Even if you don't intend on saving from bookmarks, it's highly recommended that you do so in order to access works that may be restricted to logged-in users only. 
+`python ao3download.py -login username:password -source bookmarks +` 
+If setting your login for the first time or updating it, the login argument is compulsory for the download to work. Otherwise, it can be excluded.
+- Please note that large bookmark quantities as well as works that are exceptionally long will of course take a long time to download or result in ratelimits. I've only tried downloading my ~190 bookmarks in the background, which was successful.
+- Also note that the downloader doesn't seem to pull series from bookmarks, which seems to be an issue with the API used used. Downloading series using the `-work` command still works.  
 
 ## To-Do List
 - [x] Allow user to customise locations of saved files.
@@ -88,4 +92,6 @@ Will be added fully later. Please note that your login is stored within the `.js
 - [x] Merge separated --file/--work arguments.
 
 - [ ] ...refactoring everything 
+
+- [ ] Add appropriate error messsages.
 
