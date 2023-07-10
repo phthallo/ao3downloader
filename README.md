@@ -45,6 +45,7 @@ options:
 Downloading works and series can both be done with this command. 
 
 `python ao3download.py -source url https://archiveofourown.org/works/17400464`
+
 This will save the fanfiction as `Stag Beetles and Broken Legs.pdf` at the following path: `C:/Users/USERNAME/Documents/Archive of Our Own/Works`. Individual fanfics will always be saved under a 'Works' folder within whatever save location you set.
 
 `python ao3download.py -source url https://archiveofourown.org/series/1264421`
@@ -75,7 +76,9 @@ You can update the default settings for save location and filetype by using the 
 
 ## Saving from your bookmarks
 In order to save from your bookmarks, you must have set your login using the `-login username:password` command. Even if you don't intend on saving from bookmarks, it's highly recommended that you do so in order to access works that may be restricted to logged-in users only. 
+
 `python ao3download.py -login username:password -source bookmarks +` 
+
 If setting your login for the first time or updating it, the login argument is compulsory for the download to work. Otherwise, it can be excluded.
 - Please note that large bookmark quantities as well as works that are exceptionally long will of course take a long time to download or result in ratelimits. I've only tried downloading my ~190 bookmarks in the background, which was successful.
 - Also note that the downloader doesn't seem to pull series from bookmarks, which seems to be an issue with the API used used. Downloading series using the `-work` command still works.  
