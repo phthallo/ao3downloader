@@ -40,6 +40,7 @@ if args.login == ["DEFAULT", "DEFAULT"]: #if the person hasn't set a username an
     print("Please set your login using `-login yourusername:yourpassword` as one of your arguments.")
 else: # if user has already set their login
     login = (re.sub(":", " ", args.login, 1)).split() #splits input into username and password based on the location of the first semicolon. ao3 can't have semicolons in the username, so this should work.
+    sess = AO3.Session(login[0], login[1]) # load session: needed for restricted works and for bookmarked works
     print("Login credentials have been updated.")
 
 path = args.path
