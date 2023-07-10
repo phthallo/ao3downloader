@@ -81,7 +81,7 @@ In order to save from your bookmarks, you must have set your login using the `-l
 
 If setting your login for the first time or updating it, the login argument is compulsory for the download to work. Otherwise, it can be excluded.
 - Please note that large bookmark quantities as well as works that are exceptionally long will of course take a long time to download or result in ratelimits. I've only tried downloading my ~190 bookmarks in the background, which was successful.
-- Also note that the downloader doesn't seem to pull series from bookmarks, which seems to be an issue with the API used used. Downloading series using the `-work` command still works.  
+- Also note that the downloader doesn't pull series from bookmarks, which is an [issue](https://github.com/ArmindoFlores/ao3_api/issues/86) with the API used. Downloading series using the `-work` command still works normally, but until the PR is implemented there's nothing much that can be done. 
 
 ## To-Do List
 - [x] Allow user to customise locations of saved files.
